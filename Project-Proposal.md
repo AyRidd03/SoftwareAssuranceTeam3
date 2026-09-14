@@ -32,7 +32,7 @@ Keycloak also provides tools for managing user sessions. Administrators and user
 In addition to these technical security features, Keycloak follows several security practices as an open-source project. The project has an OpenSSF Best Practices badge, publishes a security scorecard, and has a formal process for reporting and handling security vulnerabilities. Security researchers who report vulnerabilities can also receive credit in published security advisories. Overall, Keycloak provides multiple layers of protection for user accounts, sessions, tokens, and the applications connected to the IAM system.
 
 4. **Team Motivation** — Sean
-   - Why we selected Keycloak
+   Our team chose Keycloak because several members were already interested in Identity and Access Management (IAM) and wanted to work with a real, widely-used tool. Some of us also saw it as a chance to strengthen a weaker area of our technical skills, since we didn't have much hands-on experience working with authentication. Keycloak also worked well since, it is a well-established open-source project with tons of documentation, history, and activity to study over a full semester. To keep things focused, we narrowed our project scope to authentication and credential security in an enterprise envrionment. Overall, we decided on Keycloak because it matched our interests, offered room to learn, and gave us a project we could scope for the semester.
 
 5. **Open-Source Project Description** — Ayden
    - What Keycloak is
