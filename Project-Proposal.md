@@ -4,11 +4,11 @@
    - Chosen Software: Keycloak
    - Repository: https://github.com/keycloak/keycloak
 
-2. **Systems Engineering View** — Justin
+2. **Systems Engineering View**
    - Diagram
    - Explanation of the system in the enterprise environment
 
-3. **Security Needs, Threats, and Features** — Isaiah
+3. **Security Needs, Threats, and Features**
 
    Security needs Why an IAM System Like Keycloak Matters
 
@@ -32,18 +32,18 @@
 
    In addition to these technical security features, Keycloak follows several security practices as an open-source project. The project has an OpenSSF Best Practices badge, publishes a security scorecard, and has a         formal process for reporting and handling security vulnerabilities. Security researchers who report vulnerabilities can also receive credit in published security advisories. Overall, Keycloak provides multiple layers    of protection for user accounts, sessions, tokens, and the applications connected to the IAM system.
 
-4. **Team Motivation** — Sean
+4. **Team Motivation**
 
    Our team chose Keycloak because several members were already interested in Identity and Access Management (IAM) and wanted to work with a real, widely-used tool. Some of us also saw it as a chance to strengthen a weaker area of our technical skills, since we didn't have much hands-on experience working with authentication. Keycloak also worked well since, it is a well-established open-source project with tons of documentation, history, and activity to study over a full semester. To keep things focused, we narrowed our project scope to authentication and credential security in an enterprise envrionment. Overall, we decided on Keycloak because it matched our interests, offered room to learn, and gave us a project we could scope for the semester.
 
-5. **Open-Source Project Description** — Ayden
+5. **Open-Source Project Description**
    - What Keycloak is
    - Contributors and activity
    - Use and popularity
    - Languages and platform
    - Documentation
 
-6. **License and Contributions** – Sewhenu
+6. **License and Contributions**
 
    Keycloak is licensed under the **Apache License, Version 2.0**. The license permits the software to be used, modified, and distributed under its terms. When modified work is redistributed, required copyright and attribution notices must be retained and modified files must identify that changes were made. Contributions intentionally submitted to Keycloak are also provided under the Apache 2.0 license unless otherwise stated.
 
@@ -51,7 +51,7 @@
 
    Keycloak uses the **Developer's Certificate of Origin (DCO)** as a contributor requirement. Contributors must submit only work they have the legal right to contribute and that Keycloak can distribute under its license. Contributors are instructed to read the DCO and sign off their commits using the `--signoff` option with `git commit`. This adds a `Signed-off-by` line to the commit message and confirms the contributor's right to submit the contribution.
 
-7. **Security History** — Sean
+7. **Security History**
    
    Known / Currently Open Vulnerabilities:
 
@@ -81,7 +81,7 @@
 
    Keycloak's vulnerability disclosure policy follows the CISA vulnerability disclosure policy template, with a dedicated Security Response Team centrally managing research. Access to CVE-related data follows the principle of least privilege among all vendors involved, and coordinated disclosure and embargo dates are agreed on before anything goes public. Severity drives the fix timeline. Depending on how severe a vulnerability is, it may be fixed in the current major or minor release, or deferred to the next one for lower severity issues, and organizations that can't upgrade regularly are pointed towards the Red Hat build of Keycloak for long-term support instead of staying on an unpatched version. The policy also sets explicit rules for AI-assisted vulnerability reports. Reports produced with AI assistance are accepted, but the reporter must validate the finding themselves, disclose that AI was used, and be able to explain the vulnerability and reproduction steps in their own words, while unreviewed AI output with generic descriptions or hallucinated endpoints is rejected outright without further analysis. Similarly, there is no blind trust in scanners. Raw output from automated security scanners is never accepted on its own, and the reporter has to triage the finding and supply a concrete proof of concept for Keycloak specifically, which is a deliberate decision to protect maintainer time from noisy, unvalidated reports. It is also worth noting that despite this formal process, Keycloak currently has no active bug bounty program, so reporters are credited through attribution in security advisories rather than paid.
 
-8. **Team Reflection** — Sewhenu
+8. **Team Reflection**
    - Combined reflection from all five members
 
 ## References
