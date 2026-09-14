@@ -88,7 +88,9 @@
 8. **Team Reflection**
    
    Through this assignment, our team learned more about how a large open-source project such as Keycloak operates and how much collaboration, documentation, and organization goes into maintaining it. Several of us had limited experience working with GitHub beyond basic use, so working on the proposal gave us a better understanding of repositories, issues, branches, commits, pull requests, reviews, and project boards. We also learned about Keycloak's licensing and contribution requirements, including the Apache 2.0 license and Developer's Certificate of Origin (DCO), as well as its governance, security policies, vulnerability reporting process, and the large community of contributors involved in the project.
+
    The assignment also helped us understand the importance of defining a manageable scope when assessing a large software project. Rather than trying to examine all of Keycloak, we began looking at the system within an operational environment and identifying the security needs, threats, and features that are most relevant to our project. Researching Keycloak's security history, CVEs, documentation, and community issues also gave us more exposure to how security concerns are identified and handled in a real open-source project.
+
    The most useful part of the assignment was the hands-on experience of working together through GitHub. As a team, we created and assigned issues, documented our research, worked on separate sections, used branches and commits, submitted pull requests, reviewed each other's work, and merged approved changes into the proposal. Going through this process helped make GitHub's collaborative workflow much clearer and showed us how individual contributions can come together into one project. Overall, the assignment gave us a stronger foundation for working together and a better understanding of Keycloak that we can build on as we continue the semester project.
 
 ## References
