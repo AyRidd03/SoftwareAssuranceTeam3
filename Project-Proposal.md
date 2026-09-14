@@ -30,6 +30,7 @@ Keycloak includes several built-in security features that help protect user acco
 Keycloak also provides tools for managing user sessions. Administrators and users can view and revoke active sessions, set session timeouts, and control how long different types of tokens remain valid. Step-up authentication can require users to provide stronger authentication when performing sensitive actions. Keycloak also includes built-in protections against common attacks such as CSRF, clickjacking, SQL injection, open redirects, and SSRF. It supports HTTPS/SSL enforcement as well as controls for token revocation and access scopes.
 
 In addition to these technical security features, Keycloak follows several security practices as an open-source project. The project has an OpenSSF Best Practices badge, publishes a security scorecard, and has a formal process for reporting and handling security vulnerabilities. Security researchers who report vulnerabilities can also receive credit in published security advisories. Overall, Keycloak provides multiple layers of protection for user accounts, sessions, tokens, and the applications connected to the IAM system.
+
 5. **Team Motivation** — Sean
    - Why we selected Keycloak
 
