@@ -37,13 +37,17 @@
    Our team chose Keycloak because several members were already interested in Identity and Access Management (IAM) and wanted to work with a real, widely-used tool. Some of us also saw it as a chance to strengthen a weaker area of our technical skills, since we didn't have much hands-on experience working with authentication. Keycloak also worked well since, it is a well-established open-source project with tons of documentation, history, and activity to study over a full semester. To keep things focused, we narrowed our project scope to authentication and credential security in an enterprise envrionment. Overall, we decided on Keycloak because it matched our interests, offered room to learn, and gave us a project we could scope for the semester.
 
 5. **Open-Source Project Description**
-   - What Keycloak is
-   - Contributors and activity
-   - Use and popularity
-   - Languages and platform
-   - Documentation
+   Keycloak is an Open Source Identity and Access Management For Modern Applications and Service.
 
-6. **License and Contributions**
+   As of writing this, there are 32,157 commits with 1,608 total contributors. Last week there were 42 commits with user ahus1 (Alexander Schwartz) being the major contributor as of recently. Keycloak has been an active open source project since June 30, 2015.
+
+   Keycloak's use cases are broad and popular, spanning to several major corporations such as Breunigar (A German Fashion Retailer), Hitachi (A Japanese Bank Service), ITFM (A Brazillian Federal Institute of Technology), and many more worldwide applicable cases.
+
+   The program is majority based in Java, but there is also additional support for programming languages such as JavaScript (Client Sided) and Node.js(Server Sided). Keycloak supports OpenJDK, Docker, Podman, Kubernetes, and Openshift to help get a user started utilizing Keycloak. There are also 39 different localizations for Keycloak with the ability to add more localizations described in the documentation.
+
+   Keycloak has extensive documentation with a link to https://www.keycloak.org/guides that helps the user get started or helps a user utilize and expand their usecases with Keycloak's software. Each page in the "Getting Started" tab comes with performance recomendations, links to the software required such as OpenJDK 25 if the user decided to select OpenJDK without having the correct version, and Instructions to start both the external software as well as utilizing Keycloak. Other features of the documentation include Server management, Operations, Monitoring, Security, Availability, UI customization, API Admin, and Migration.
+
+7. **License and Contributions**
 
    Keycloak is licensed under the **Apache License, Version 2.0**. The license permits the software to be used, modified, and distributed under its terms. When modified work is redistributed, required copyright and attribution notices must be retained and modified files must identify that changes were made. Contributions intentionally submitted to Keycloak are also provided under the Apache 2.0 license unless otherwise stated.
 
@@ -51,7 +55,7 @@
 
    Keycloak uses the **Developer's Certificate of Origin (DCO)** as a contributor requirement. Contributors must submit only work they have the legal right to contribute and that Keycloak can distribute under its license. Contributors are instructed to read the DCO and sign off their commits using the `--signoff` option with `git commit`. This adds a `Signed-off-by` line to the commit message and confirms the contributor's right to submit the contribution.
 
-7. **Security History**
+8. **Security History**
    
    Known / Currently Open Vulnerabilities:
 
