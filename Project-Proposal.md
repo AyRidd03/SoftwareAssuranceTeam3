@@ -31,17 +31,17 @@ Keycloak also provides tools for managing user sessions. Administrators and user
 
 In addition to these technical security features, Keycloak follows several security practices as an open-source project. The project has an OpenSSF Best Practices badge, publishes a security scorecard, and has a formal process for reporting and handling security vulnerabilities. Security researchers who report vulnerabilities can also receive credit in published security advisories. Overall, Keycloak provides multiple layers of protection for user accounts, sessions, tokens, and the applications connected to the IAM system.
 
-5. **Team Motivation** — Sean
+4. **Team Motivation** — Sean
    - Why we selected Keycloak
 
-6. **Open-Source Project Description** — Ayden
+5. **Open-Source Project Description** — Ayden
    - What Keycloak is
    - Contributors and activity
    - Use and popularity
    - Languages and platform
    - Documentation
 
-7. **License and Contributions** – Sewhenu
+6. **License and Contributions** – Sewhenu
 
    Keycloak is licensed under the **Apache License, Version 2.0**. The license permits the software to be used, modified, and distributed under its terms. When modified work is redistributed, required copyright and attribution notices must be retained and modified files must identify that changes were made. Contributions intentionally submitted to Keycloak are also provided under the Apache 2.0 license unless otherwise stated.
 
@@ -49,11 +49,11 @@ In addition to these technical security features, Keycloak follows several secur
 
    Keycloak uses the **Developer's Certificate of Origin (DCO)** as a contributor requirement. Contributors must submit only work they have the legal right to contribute and that Keycloak can distribute under its license. Contributors are instructed to read the DCO and sign off their commits using the `--signoff` option with `git commit`. This adds a `Signed-off-by` line to the commit message and confirms the contributor's right to submit the contribution.
 
-8. **Security History** — Sean
+7. **Security History** — Sean
    - Known vulnerabilities
    - Security engineering decisions, changes, and features
 
-9. **Team Reflection** — Sewhenu
+8. **Team Reflection** — Sewhenu
    - Combined reflection from all five members
 
 ## References
