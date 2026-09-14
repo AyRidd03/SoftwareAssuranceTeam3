@@ -53,7 +53,7 @@
 
 7. **Security History** — Sean
    
-- Known / Currently Open Vulnerabilities:
+Known / Currently Open Vulnerabilities:
 
 Keycloak has accumulated a substantial CVE history over its lifetime, spanning categories like authentication bypass, injection, and access control failures. Keycloak currently has 9 open CVEs, with one opened 3 days ago, and the longest-standing open CVE was opened on June 30th.
 
@@ -65,7 +65,7 @@ CVE-2026-18569 - OIDC broker backchannel logout accepts unsigned forged logout t
 
 CVE-2026-12388 - IdP mapper admin role escalation. A flaw in identity provider mapper handling allows escalation to an admin role. It's the most-discussed open CVE in the tracker (11 comments). This vulnerability was opened on June 30th.
 
-- Fixed Vulnerabilities:
+Fixed Vulnerabilities:
 
 These are examples of vulnerabilities that were identified, assigned a CVE, and patched in a specific release.
 
@@ -77,7 +77,7 @@ CVE-2026-19608 - Name-only group claims let same-name groups satisfy path-specif
 
 CVE-2026-15571 - Predictable account-linking hash enables account takeover via malicious OIDC client. The hash used to link a user's account during OIDC identity brokering was predictable, so a malicious OIDC client could compute it and take over another user's account through the linking flow.
 
-- Security Policy and Disclosure Process:
+Security Policy and Disclosure Process:
 
 Keycloak's vulnerability disclosure policy follows the CISA vulnerability disclosure policy template, with a dedicated Security Response Team centrally managing research. Access to CVE-related data follows the principle of least privilege among all vendors involved, and coordinated disclosure and embargo dates are agreed on before anything goes public. Severity drives the fix timeline. Depending on how severe a vulnerability is, it may be fixed in the current major or minor release, or deferred to the next one for lower severity issues, and organizations that can't upgrade regularly are pointed towards the Red Hat build of Keycloak for long-term support instead of staying on an unpatched version. The policy also sets explicit rules for AI-assisted vulnerability reports. Reports produced with AI assistance are accepted, but the reporter must validate the finding themselves, disclose that AI was used, and be able to explain the vulnerability and reproduction steps in their own words, while unreviewed AI output with generic descriptions or hallucinated endpoints is rejected outright without further analysis. Similarly, there is no blind trust in scanners. Raw output from automated security scanners is never accepted on its own, and the reporter has to triage the finding and supply a concrete proof of concept for Keycloak specifically, which is a deliberate decision to protect maintainer time from noisy, unvalidated reports. It is also worth noting that despite this formal process, Keycloak currently has no active bug bounty program, so reporters are credited through attribution in security advisories rather than paid.
 
