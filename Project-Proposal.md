@@ -5,8 +5,103 @@
    - Repository: https://github.com/keycloak/keycloak
 
 2. **Systems Engineering View**
-   - Diagram
-   - Explanation of the system in the enterprise environment
+
+## Diagram
+
+```mermaid
+flowchart TB
+    subgraph OUTSIDE["Outside the Corporate Network"]
+        REMOTE["Remote Employee"]
+        CONTRACTOR["Third-Party Contractor"]
+        ATTACKER(("Attacker"))
+    end
+
+    subgraph EDGE["Network Perimeter"]
+        GATEWAY["Reverse Proxy / WAF<br/>TLS termination, rate limiting"]
+    end
+
+    subgraph OFFICE["Corporate Network"]
+        DESKTOP["Managed Workstation"]
+    end
+
+    subgraph APPS["Business Applications"]
+        BIZAPPS["HR / Payroll, IT Service Desk, Finance<br/>All delegate login to Keycloak"]
+    end
+
+    subgraph IDENTITY["Identity Services"]
+        KEYCLOAK["Keycloak"]
+        SCOPE["Authorization and Credential Subsystem<br/>Policy evaluation, role mapping,<br/>credential storage, MFA"]
+        CONSOLE["Admin Console"]
+    end
+
+    subgraph STORAGE["Protected Data"]
+        DB[("Database<br/>Policies, clients, credentials")]
+        DIRECTORY[("Active Directory<br/>Employee accounts and groups")]
+        KEYS["Realm Signing Keys"]
+    end
+
+    MONITOR["Security Monitoring<br/>Login and admin events"]
+
+    REMOTE --> GATEWAY
+    CONTRACTOR --> GATEWAY
+    ATTACKER -.->|"Credential attacks,<br/>privilege escalation"| GATEWAY
+
+    GATEWAY --> BIZAPPS
+    DESKTOP --> BIZAPPS
+    DESKTOP --> CONSOLE
+
+    BIZAPPS -->|"OIDC: who is this user,<br/>and what may they access?"| KEYCLOAK
+    CONSOLE --> KEYCLOAK
+
+    KEYCLOAK --> SCOPE
+    SCOPE --> DB
+    KEYCLOAK -->|"User federation"| DIRECTORY
+    KEYCLOAK --> KEYS
+    KEYCLOAK --> MONITOR
+
+    style SCOPE fill:#2d4a22,stroke:#5a9c3e,stroke-width:3px
+```
+
+**Scope note:** the highlighted component is the subsystem this assessment scopes
+to for design and code analysis.
+
+## Explanation of the System in the Enterprise Environment
+
+Keycloak serves as the single sign-on and identity service for a mid-size
+enterprise of roughly 2,500 employees, along with a smaller population of
+third-party contractors. Three populations reach the company's systems: employees
+on managed workstations inside the corporate network, employees connecting
+remotely from networks the organization does not control, and contractors granted
+access to a narrow set of systems for the duration of their engagement.
+
+The business applications — HR and payroll, the IT service desk, and finance —
+make no access decisions of their own. When a user attempts to reach one, the
+application asks Keycloak two questions: who is this user, and what may they
+access here? This is the defining architectural property of the environment.
+Keycloak is the single point at which access decisions are made for every
+application in the organization.
+
+Employee accounts are federated from Active Directory, which remains the
+authoritative source for workforce identity. Keycloak maps directory group
+memberships onto the roles that drive policy evaluation. Contractor accounts are
+managed directly in Keycloak so their access can be revoked independently of the
+corporate directory. The deployment is segmented by trust level: the perimeter
+terminates TLS and applies rate limiting, the business applications sit behind it,
+and Keycloak occupies a more protected zone with its administrative console
+reachable only from the corporate network. Stored credentials, access policies,
+and the signing keys Keycloak uses to prove a token is genuine reside in the
+innermost zone, with login and administrative activity recorded for monitoring.
+
+Users expect that payroll and finance data is reachable only by those whose role
+requires it, that contractors cannot reach systems outside their engagement, and
+that credentials are stored safely. The organization expects least privilege to be
+enforced consistently across every application rather than reimplemented
+differently in each one. All of those expectations rest on the authorization and
+credential subsystem — policy evaluation, the permission model, role mapping from
+federated sources, and credential storage and verification — which is why our
+design and code analysis scopes there. A defect in that subsystem does not degrade
+a single application; it can silently grant the wrong people access across every
+system in the organization at once.
 
 3. **Security Needs, Threats, and Features**
 
@@ -34,7 +129,7 @@
 
 4. **Team Motivation**
 
-   Our team chose Keycloak because several members were already interested in Identity and Access Management (IAM) and wanted to work with a real, widely-used tool. Some of us also saw it as a chance to strengthen a weaker area of our technical skills, since we didn't have much hands-on experience working with authentication. Keycloak also worked well since, it is a well-established open-source project with tons of documentation, history, and activity to study over a full semester. To keep things focused, we narrowed our project scope to authentication and credential security in an enterprise envrionment. Overall, we decided on Keycloak because it matched our interests, offered room to learn, and gave us a project we could scope for the semester.
+   Our team chose Keycloak because several members were already interested in Identity and Access Management (IAM) and wanted to work with a real, widely-used tool. Some of us also saw it as a chance to strengthen a weaker area of our technical skills, since we didn't have much hands-on experience working with authentication. Keycloak also worked well since, it is a well-established open-source project with tons of documentation, history, and activity to study over a full semester. To keep things focused, we narrowed our project scope to authentication and credential security in an enterprise environment. Overall, we decided on Keycloak because it matched our interests, offered room to learn, and gave us a project we could scope for the semester.
 
 5. **Open-Source Project Description**
    Keycloak is an Open Source Identity and Access Management For Modern Applications and Service.
