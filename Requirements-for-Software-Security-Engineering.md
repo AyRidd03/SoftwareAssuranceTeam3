@@ -21,7 +21,7 @@ Put your name next to one interaction. These are suggested candidates (biased to
 | # | External interactor | Candidate interaction / feature | Claimed by | Status |
 |---|---|---|---|---|
 | 1 | End user (human) | Login / authentication via browser (password + OTP) | | Not started |
-| 2 | Realm administrator (human) | Manage user credentials & password policies via Admin Console | | Not started |
+| 2 | Realm administrator (human) | Manage user credentials & password policies via Admin Console | @AyRidd03 | Not started |
 | 3 | Client application (system) | Obtain tokens via OIDC authorization code flow | | Not started |
 | 4 | External identity provider (system) | Identity brokering / federated login (SAML or OIDC IdP) | | Not started |
 | 5 | Directory service (system) | User federation with LDAP / Active Directory | | Not started |
