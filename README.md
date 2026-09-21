@@ -26,5 +26,5 @@ Semester Project for CYBR 8420 Software Assurance Team 3
 
 | Meeting | Day | Time |
 |---|---|---|
-| Primary Huddle | Friday | 2:00 PM |
-| Secondary / overflow | Monday | 4:15 PM |
+| Primary Huddle | Monday | 4:15 PM |
+| Secondary / overflow | Friday | 2:00 PM |
