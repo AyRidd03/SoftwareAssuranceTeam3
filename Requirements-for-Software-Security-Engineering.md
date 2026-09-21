@@ -53,6 +53,7 @@ Copy this checklist under your section below and work through it in order.
 An employee uses Keycloak through a web browser to authenticate with a password and one-time password (OTP) before accessing an enterprise application. This interaction is essential because Keycloak provides the authentication service between the employee and the protected enterprise application.
 
 **Use/misuse case diagram:**  
+![Interaction 1 Use/Misuse Case Diagram](diagrams/interaction-1-misuse-iteration-4-final.png)
 
 
 **Misuser profile:**  
