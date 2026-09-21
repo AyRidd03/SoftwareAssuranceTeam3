@@ -112,7 +112,7 @@ Suggested split if we want everyone touching it — each person reviews one doc 
 | Doc area reviewed | Reviewer | Observations (missing / unclear / could improve) |
 |---|---|---|
 | Server installation & hardening guide | | |
-| Authentication / credential configuration | | |
+| Authentication / credential configuration |[@Sewhenu-Ayeni](https://github.com/Sewhenu-Ayeni) | |
 | Client & token configuration | | |
 | Federation / brokering configuration | | |
 | Other: | | |
