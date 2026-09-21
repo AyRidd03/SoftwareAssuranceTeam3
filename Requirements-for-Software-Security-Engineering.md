@@ -24,7 +24,7 @@ Put your name next to one interaction. These are suggested candidates (biased to
 | 2 | Realm administrator (human) | Manage user credentials & password policies via Admin Console | [@AyRidd03](https://github.com/AyRidd03) | Not started |
 | 3 | Client application (system) | Obtain tokens via OIDC authorization code flow | [@JBoogieman](https://github.com/JBoogieman) | Not started |
 | 4 | External identity provider (system) | Identity brokering / federated login (SAML or OIDC IdP) | | Not started |
-| 5 | Directory service (system) | User federation with LDAP / Active Directory | | Not started |
+| 5 | Directory service (system) | User federation with LDAP / Active Directory | [@isaiahjames11](https://github.com/isaiahjames11) | Not started |
 
 Other candidates if we swap: Admin REST API automation, service accounts (client credentials grant), user self-service account console, token introspection by a resource server.
 
