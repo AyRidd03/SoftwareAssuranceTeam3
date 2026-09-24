@@ -1,0 +1,66 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="jF8EdKNp0leVsPMokzRo">
+    <mxGraphModel dx="1374" dy="835" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="QpYgPfdrIiwcehMTT_iV-1" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;" value="Admin" vertex="1">
+          <mxGeometry height="80" width="120" x="320" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QpYgPfdrIiwcehMTT_iV-2" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;" value="User" vertex="1">
+          <mxGeometry height="80" width="120" x="320" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="QpYgPfdrIiwcehMTT_iV-3" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Password&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="320" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="QpYgPfdrIiwcehMTT_iV-4" edge="1" parent="1" source="QpYgPfdrIiwcehMTT_iV-2" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="QpYgPfdrIiwcehMTT_iV-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="370" y="440" as="sourcePoint" />
+            <mxPoint x="420" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QpYgPfdrIiwcehMTT_iV-5" connectable="0" parent="QpYgPfdrIiwcehMTT_iV-4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" value="Create Password" vertex="1">
+          <mxGeometry relative="1" x="0.4923" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QpYgPfdrIiwcehMTT_iV-6" edge="1" parent="1" source="QpYgPfdrIiwcehMTT_iV-1" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="QpYgPfdrIiwcehMTT_iV-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="375" y="130" as="sourcePoint" />
+            <mxPoint x="425" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QpYgPfdrIiwcehMTT_iV-7" connectable="0" parent="QpYgPfdrIiwcehMTT_iV-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" value="Reset Password" vertex="1">
+          <mxGeometry relative="1" x="-0.2769" y="3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QpYgPfdrIiwcehMTT_iV-8" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Authentication" vertex="1">
+          <mxGeometry height="80" width="120" x="90" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="QpYgPfdrIiwcehMTT_iV-9" edge="1" parent="1" source="QpYgPfdrIiwcehMTT_iV-2" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="QpYgPfdrIiwcehMTT_iV-8" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="300" y="480" as="sourcePoint" />
+            <mxPoint x="350" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QpYgPfdrIiwcehMTT_iV-10" connectable="0" parent="QpYgPfdrIiwcehMTT_iV-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" value="Provide Authentication" vertex="1">
+          <mxGeometry relative="1" x="-0.2154" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QpYgPfdrIiwcehMTT_iV-11" edge="1" parent="1" source="QpYgPfdrIiwcehMTT_iV-8" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="QpYgPfdrIiwcehMTT_iV-1" value="">
+          <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <mxPoint x="190" y="250" as="sourcePoint" />
+            <mxPoint x="290" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QpYgPfdrIiwcehMTT_iV-12" connectable="0" parent="QpYgPfdrIiwcehMTT_iV-11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" value="Validate Authentication" vertex="1">
+          <mxGeometry relative="1" x="0.2412" y="-3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
