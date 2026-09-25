@@ -1,0 +1,80 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="jF8EdKNp0leVsPMokzRo">
+    <mxGraphModel dx="1374" dy="783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="9wDMRtNSKODo2x-nz0S--1" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;" value="Head Admin" vertex="1">
+          <mxGeometry height="80" width="120" x="365" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9wDMRtNSKODo2x-nz0S--2" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;" value="User" vertex="1">
+          <mxGeometry height="80" width="120" x="230" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="9wDMRtNSKODo2x-nz0S--3" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;" value="Admin" vertex="1">
+          <mxGeometry height="80" width="120" x="100" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="9wDMRtNSKODo2x-nz0S--4" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Master Realm" vertex="1">
+          <mxGeometry height="80" width="120" x="365" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="9wDMRtNSKODo2x-nz0S--5" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Subrealm" vertex="1">
+          <mxGeometry height="80" width="120" x="230" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="9wDMRtNSKODo2x-nz0S--6" edge="1" parent="1" source="9wDMRtNSKODo2x-nz0S--1" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="9wDMRtNSKODo2x-nz0S--4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="410" y="170" as="sourcePoint" />
+            <mxPoint x="460" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9wDMRtNSKODo2x-nz0S--13" connectable="0" parent="9wDMRtNSKODo2x-nz0S--6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Manage Master Realm" vertex="1">
+          <mxGeometry relative="1" x="-0.36" y="3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9wDMRtNSKODo2x-nz0S--7" edge="1" parent="1" source="9wDMRtNSKODo2x-nz0S--4" style="endArrow=classic;html=1;rounded=0;exitX=0.083;exitY=0.738;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.775;entryY=0.063;entryDx=0;entryDy=0;entryPerimeter=0;" target="9wDMRtNSKODo2x-nz0S--5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="270" y="250" as="sourcePoint" />
+            <mxPoint x="320" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9wDMRtNSKODo2x-nz0S--8" connectable="0" parent="9wDMRtNSKODo2x-nz0S--7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Create Subrealm" vertex="1">
+          <mxGeometry relative="1" x="-0.0118" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9wDMRtNSKODo2x-nz0S--9" edge="1" parent="1" source="9wDMRtNSKODo2x-nz0S--4" style="endArrow=classic;html=1;rounded=0;" target="9wDMRtNSKODo2x-nz0S--3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="260" y="200" as="sourcePoint" />
+            <mxPoint x="310" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9wDMRtNSKODo2x-nz0S--10" connectable="0" parent="9wDMRtNSKODo2x-nz0S--9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Assign Admin to Subrealm" vertex="1">
+          <mxGeometry relative="1" x="-0.1217" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9wDMRtNSKODo2x-nz0S--11" edge="1" parent="1" source="9wDMRtNSKODo2x-nz0S--3" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.1;entryY=0.15;entryDx=0;entryDy=0;entryPerimeter=0;" target="9wDMRtNSKODo2x-nz0S--5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="170" y="310" as="sourcePoint" />
+            <mxPoint x="220" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9wDMRtNSKODo2x-nz0S--12" connectable="0" parent="9wDMRtNSKODo2x-nz0S--11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Manage Subrealm" vertex="1">
+          <mxGeometry relative="1" x="-0.3538" y="-4" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9wDMRtNSKODo2x-nz0S--14" edge="1" parent="1" source="9wDMRtNSKODo2x-nz0S--2" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="9wDMRtNSKODo2x-nz0S--5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="260" y="500" as="sourcePoint" />
+            <mxPoint x="310" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9wDMRtNSKODo2x-nz0S--15" connectable="0" parent="9wDMRtNSKODo2x-nz0S--14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Exchange Credentials" vertex="1">
+          <mxGeometry relative="1" x="0.5176" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
