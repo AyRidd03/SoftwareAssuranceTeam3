@@ -1,4 +1,4 @@
-### Interaction 2: <title> — <name>
+### Interaction 2: <Realm admin manages credentials and password policy> — <Ayden Riddle>
 
 **Interaction description:**
 *(1–2 sentences: actor, feature, why it's essential)*
