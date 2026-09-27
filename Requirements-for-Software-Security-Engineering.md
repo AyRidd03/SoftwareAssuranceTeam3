@@ -86,6 +86,11 @@ An employee uses Keycloak through a web browser to authenticate with a password 
 The misuse case analysis generally aligns with security capabilities available in Keycloak. Keycloak provides configurable brute-force detection, OTP-based second-factor authentication, and protection against repeated secondary authentication failures. However, some of these protections require administrator configuration and are not enabled by default. The account-lockout denial-of-service scenario also identifies a limitation in Keycloak's protection boundary: Keycloak can provide authentication-failure and client-IP information, but blocking the source of an attack may require an external intrusion-prevention or firewall mechanism.
 
 ---
+### Interaction 3: <title> — <name>
+*(same structure)*
+
+### Interaction 4: <title> — <name>
+*(same structure)*
 
 ### Interaction 5: Directory Federation (LDAP/Active Directory User Federation — @isaiahjames11
 
@@ -127,17 +132,6 @@ Active Directory supplies employee identities, group memberships, and password v
 
 **Alignment observations:**
 Keycloak has the main controls needed here, including encrypted LDAP connections, certificate validation, vault support, and Group DN scoping. However, some of these must be configured by the administrator, so plaintext LDAP or database-stored credentials are still possible. Keycloak also trusts Active Directory for group membership, so it may not detect when a legitimate group is abused. Detecting this type of insider activity depends on auditing in Active Directory.
-
-### Interaction 3: <title> — <name>
-*(same structure)*
-
-### Interaction 4: <title> — <name>
-*(same structure)*
-
-### Interaction 5: <title> — <name>
-*(same structure)*
-
----
 
 ## Part 1 — Team-level items (shared, assign at meeting)
 
