@@ -12,7 +12,7 @@ is scoped to its authorization and credential subsystem.
 | # | Deliverable | Status |
 |---|---|---|
 | 1 | [Project Proposal](Project-Proposal.md) | Complete |
-| 2 | [Requirements for Software Security Engineering](Requirements-for-Software-Security-Engineering.md) | Complete |
+| 2 | [Requirements for Software Security Engineering](Requirements-for-Software-Security-Engineering.md) | In-Progress |
 | 3 | Assurance Cases Software Security Engineering | Not started |
 | 4 | Designing for Software Security Engineering | Not started |
 | 5 | Code analysis for Software Security Engineering | Not started |
