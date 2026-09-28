@@ -121,13 +121,15 @@ A partner organization's SAML 2.0 identity provider (IdP) authenticates contract
 `![Diagram](images/usecase-1.png)`
 
 **Misuser profile:**
-**Name:** Attacker who has compromised the partner IdP's administrator account, seeking finance and payroll access.
-**Motive:** Gain access to finance and HR/payroll systems through a login Keycloak already trusts.
-**Resources:** The partner IdP's administrator account, which lets them create users, change any user attribute, and start IdP-initiated logins.
-**Attack of Choice:** Sending signed or smuggled assertions that Keycloak may accept, such as ones carrying a victim employee's email or privileged group values.
-**Access:** Keycloak's public broker endpoint through the partner IdP, but no Keycloak administrator account or corporate network access.
+
+-**Name:** Attacker who has compromised the partner IdP's administrator account, seeking finance and payroll access.
+-**Motive:** Gain access to finance and HR/payroll systems through a login Keycloak already trusts.
+-**Resources:** The partner IdP's administrator account, which lets them create users, change any user attribute, and start IdP-initiated logins.
+-**Attack of Choice:** Sending signed or smuggled assertions that Keycloak may accept, such as ones carrying a victim employee's email or privileged group values.
+-**Access:** Keycloak's public broker endpoint through the partner IdP, but no Keycloak administrator account or corporate network access.
 
 **Iteration narrative:**
+
 **Iteration 1 – Smuggled Assertion:** Rather than having the partner IdP issue and log a separate login for each user they want to impersonate, the attacker may take one response the IdP genuinely signed and attach an unsigned assertion naming a different user, hoping Keycloak reads the unsigned one. The misuse case Smuggle an Unsigned Assertion Past Signature Checks threatens Validate IdP Response Signature and Conditions. Validate Signatures and Bind Them to the Processed Assertion mitigates this by rejecting any assertion the IdP's signature does not cover.
 
 **Iteration 2 – Account Link Hijacking:** With signatures enforced, the attacker could instead set a partner account's email to match a payroll employee's, so the IdP signs a genuine assertion with that email. The misuse case Assert a Victim Employee's Email to Hijack Account Linking threatens Link Brokered Identity to a Local Account. Require Proof of Account Ownership Before Linking mitigates this by making the existing account's owner verify by email or sign in before the accounts are linked.
