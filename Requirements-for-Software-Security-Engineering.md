@@ -1,52 +1,5 @@
 # Requirements for Software Security Engineering — Team 3 (Keycloak)
 
-**Due:** Tue Sep 29, 2026, 11:59 PM · **Points:** 100 (counts for the whole group)
-**Submission:** Link to this markdown file in our GitHub repo, submitted on Canvas.
-**Tool:** [draw.io / app.diagrams.net](https://app.diagrams.net/) — instructor provided sample shape files on the Canvas assignment page (Use Case Sample.drawio, Use-Misuse Case Sample.drawio).
-
-**Rubric:** Part 1 misuse case notation & quality (50) · Part 1 reflection (10) · Part 2 doc review (20) · Planning & reflection / project board (20)
-
----
-
-## How this works
-
-Part 1 requires **five essential interactions** between Keycloak and its environment, ideally spread across *different* external interactors (humans or systems). Each team member claims **one** interaction below and owns the full pipeline for it: use case diagram → misuse case analysis → security requirements → alignment check against Keycloak's actual features.
-
-Part 2 does **not** split into five cases — it's a single team review of Keycloak's security-related documentation (see Part 2 section below).
-
-### Claim board
-
-Put your name next to one interaction. These are suggested candidates (biased toward our authorization/credential scope) — confirm or swap at the Friday meeting. Rule of thumb: five *different* interactor types, not five things one actor does.
-
-| # | External interactor | Candidate interaction / feature | Claimed by | Status |
-|---|---|---|---|---|
-| 1 | End user (human) | Login / authentication via browser (password + OTP) |[@Sewhenu-Ayeni](https://github.com/Sewhenu-Ayeni) | Completed |
-| 2 | Realm administrator (human) | Manage user credentials & password policies via Admin Console | [@AyRidd03](https://github.com/AyRidd03) | Not started |
-| 3 | Client application (system) | Obtain tokens via OIDC authorization code flow | [@JBoogieman](https://github.com/JBoogieman) | Completed |
-| 4 | External identity provider (system) | Identity brokering / federated login (SAML or OIDC IdP) | [@SeanAnderson0](https://github.com/SeanAnderson0) | Not started |
-| 5 | Directory service (system) | User federation with LDAP / Active Directory | [@isaiahjames11](https://github.com/isaiahjames11) | Not started |
-
-Other candidates if we swap: Admin REST API automation, service accounts (client credentials grant), user self-service account console, token introspection by a resource server.
-
----
-
-## Part 1 — Per-person checklist (do this for YOUR claimed interaction)
-
-Copy this checklist under your section below and work through it in order.
-
-- [ ] **1. Define the interaction.** One sentence: who the actor is, and the *critical feature* of Keycloak they use. Tie it back to the enabling systems in our proposal's systems engineering view.
-- [ ] **2. Draw the use case diagram** in draw.io. Use cases = features Keycloak supports (not user goals in the abstract). Keep it simple at first — actor, 2–4 use cases, `<<include>>` dependencies where real (e.g., Login includes Password Hashing).
-- [ ] **3. Add misuse cases.** Pick a misuser contextualized to our environment — the *name* should convey motive, resources, attack of choice, and access (e.g., "Credential-stuffing botnet operator with breached password lists," not "Hacker"). Start from the threats in our proposal.
-- [ ] **4. Iterate.** Go back and forth: misuse case threatens a use case → add a security use case that mitigates it → ask what threatens *that* → repeat until you hit specific functional security requirements Keycloak could implement. **Prioritize mitigations implemented in Keycloak itself, not the environment.** Every misuse case must be addressed by some use case.
-- [ ] **5. Use proper notation** (class materials): white ovals = use cases, black/shaded ovals = misuse cases, `<<threatens>>` and `<<mitigates>>` arrows, misusers on the opposite side. Arrange to reduce clutter.
-- [ ] **6. Optionally run your diagram description through an AI prompt** to find missed misuse cases (instructor's sample prompt is on the Canvas page). Save the prompt you used — we need one team example plus a reflection on whether it helped.
-- [ ] **7. List your derived security requirements** — numbered, specific, functional ("Keycloak shall lock an account after N failed attempts," not "the system should be secure").
-- [ ] **8. Alignment check:** for each requirement, does Keycloak actually advertise/implement it? Cite Keycloak docs or code (links). Note gaps.
-- [ ] **9. Export your final diagram** (PNG + keep the .drawio source in the repo) and embed it in your section.
-- [ ] **10. Log your tasks** on the GitHub Project Board and write your **individual reflection** (what did you learn, what was most useful).
-
----
-
 ### Interaction 1: End-User Authentication (Browser Login + OTP) — @Sewhenu-Ayeni
 
 **Interaction description:**  
@@ -237,16 +190,6 @@ Active Directory supplies employee identities, group memberships, and password v
 **Alignment observations:**
 Keycloak has the main controls needed here, including encrypted LDAP connections, certificate validation, vault support, and Group DN scoping. However, some of these must be configured by the administrator, so plaintext LDAP or database-stored credentials are still possible. Keycloak also trusts Active Directory for group membership, so it may not detect when a legitimate group is abused. Detecting this type of insider activity depends on auditing in Active Directory.
 
-## Part 1 — Team-level items (shared, assign at meeting)
-
-| Task | Owner | Status |
-|---|---|---|
-| Confirm the 5 interactions cover different interactor types (no overlap) | Team — Friday mtg | |
-| AI prompt example + reflection on its usefulness for improving diagrams | | |
-| Summary of alignment findings across all 5 cases (sufficiency of Keycloak's security features vs. misuse case expectations) | | |
-| Compile individual reflections into one team reflection | | |
-| GitHub Project Board up to date + link in report: `<link here>` | | |
-| Final assembly/formatting of this file + Canvas submission | | |
 
 ## AI-Assisted Use/Misuse Case Diagram Review
 
