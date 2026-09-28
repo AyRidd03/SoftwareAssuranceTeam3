@@ -85,3 +85,30 @@ The assignment asks for **one** prompt the team used to improve our assurance ca
 **Reflection on usefulness:**
  
 ---
+
+## Part 1 & 2 — Team-level items (shared, assign at meeting)
+ 
+| Task | Owner | Status |
+|---|---|---|
+| Confirm the 5 claims target different entities / critical properties (no overlap) | Team — Monday mtg | |
+| All 5 diagrams pushed to `/diagrams` by **Fri Oct 9** so there's review time before the Mon Oct 12 huddle | Everyone | |
+| AI prompt + reflection on its usefulness | | |
+| Part 2 summary of gaps across all 5 claims | | |
+| Compile individual reflections into one team reflection | | |
+| GitHub Project Board up to date + link in report | | |
+| Final assembly/formatting of this file + Canvas submission | | |
+ 
+---
+ 
+## Submission checklist (before Oct 13)
+ 
+- [ ] 5 top-level claims listed, each an outcome-worded critical security property
+- [ ] 5 diagrams embedded, `.drawio` sources in `/diagrams`
+- [ ] Every branch in every diagram ends in noun-phrase evidence
+- [ ] Notation matches the instructor's sample; wording/typos proofread
+- [ ] AI prompt + usefulness reflection included
+- [ ] Part 2 alignment tables filled for all 5 claims + gaps summary
+- [ ] Project board link works and shows task assignments
+- [ ] Team reflection compiled
+- [ ] Canvas submission: link to this file in the repo
+ 
