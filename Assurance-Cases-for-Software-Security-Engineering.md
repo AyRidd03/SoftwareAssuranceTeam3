@@ -1,3 +1,17 @@
+### Claim board
+ 
+Put your name next to one row. The "starting point" column is just a suggestion carried over from the SSE interactions (five different entities) — confirm or swap at the Monday meeting.
+ 
+| # | Starting point (suggested, from SSE) | Top-level claim | Owner | Status |
+|---|---|---|---|---|
+| 1 | End user — browser login + OTP | | | Not started |
+| 2 | Realm administrator — credential & password policy management | | | Not started |
+| 3 | Client application — OIDC authorization code flow / tokens | | | Not started |
+| 4 | External identity provider — identity brokering | | | Not started |
+| 5 | Directory service — LDAP / AD user federation | | | Not started |
+ 
+---
+
 ## Part 1 — Per-person checklist (do this for YOUR claim)
  
 Copy this checklist into your GitHub issue and work through it in order.
