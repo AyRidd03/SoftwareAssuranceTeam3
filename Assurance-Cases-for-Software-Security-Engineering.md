@@ -71,3 +71,17 @@ Copy this checklist into your GitHub issue and work through it in order.
 ![Claim 5 Assurance Case](diagrams/assurance-case-claim-5.png)
  
 ---
+
+## Part 1 — AI-assisted improvement (team-level)
+ 
+The assignment asks for **one** prompt the team used to improve our assurance case, plus a reflection on its usefulness. The instructor's sample prompts (claim-phrasing and rebuttal brainstorming) are on the Canvas page — fine to start from those.
+ 
+**Prompt used:**
+ 
+```text
+<paste the prompt>
+```
+ 
+**Reflection on usefulness:**
+ 
+---
