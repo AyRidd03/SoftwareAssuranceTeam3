@@ -86,28 +86,6 @@ An employee uses Keycloak through a web browser to authenticate with a password 
 The misuse case analysis generally aligns with security capabilities available in Keycloak. Keycloak provides configurable brute-force detection, OTP-based second-factor authentication, and protection against repeated secondary authentication failures. However, some of these protections require administrator configuration and are not enabled by default. The account-lockout denial-of-service scenario also identifies a limitation in Keycloak's protection boundary: Keycloak can provide authentication-failure and client-IP information, but blocking the source of an attack may require an external intrusion-prevention or firewall mechanism.
 
 ---
-
-### Interaction 2: <title> — <name>
-
-**Interaction description:**
-*(1–2 sentences: actor, feature, why it's essential)*
-
-**Use/misuse case diagram:**
-`![Diagram](images/usecase-1.png)`
-
-**Misuser profile:** *(name, motive, resources, attack of choice, access)*
-
-**Iteration narrative:** *(brief: misuse case → countermeasure → next misuse case → …)*
-
-**Derived security requirements:**
-
-| ID | Requirement | Addresses misuse case | Implemented in Keycloak? (doc/code link) |
-|---|---|---|---|
-| SR-1.1 | | | |
-| SR-1.2 | | | |
-
-**Alignment observations:** *(sufficiency of Keycloak's features vs. what the analysis expects)*
-
 ### Interaction 3: Relying Client Application — Token Acquisition via the OIDC Authorization Code Flow — [@JBoogieman](https://github.com/JBoogieman)
 
 #### Description
@@ -180,10 +158,46 @@ Status key: *Default* (enforced out of the box). *Opt-in* (implemented but off u
 ### Interaction 4: <title> — <name>
 *(same structure)*
 
-### Interaction 5: <title> — <name>
-*(same structure)*
+### Interaction 5: Directory Federation (LDAP/Active Directory User Federation — @isaiahjames11
 
----
+**Interaction description:**
+Active Directory supplies employee identities, group memberships, and password verification to Keycloak through its LDAP User Federation feature, which Keycloak uses to authenticate employees and map their AD groups to the realm roles that govern access to every connected business application. This interaction is essential because it is the "User federation" link to the Protected Data zone in our systems engineering view, and every workforce identity and role assignment passes through it.
+
+**Use/misuse case diagram:**
+![Interaction 5 Use/Misuse Case Diagram](diagrams/keycloak-ldap-usecase.png)
+
+
+
+**Misuser profile:**
+**misuser:** Rogue IT insider with AD group-write rights seeking Keycloak admin access
+
+- **Motive:** Gain administrative access to enterprise applications through Keycloak without authorization.
+- **Resources:** Delegated write permissions on Active Directory groups, a workstation on the internal network, and packet-capture tools.
+- **Attack of choice:** Manipulating AD group data that Keycloak trusts, and harvesting credentials that cross the federation link.
+- **Available access:** Internal network access and limited AD administrative rights, but no Keycloak administrator account.
+
+
+**Iteration narrative:**
+**Iteration 1 – Credential Interception:** Since Keycloak checks employee passwords through Active Directory, an attacker could capture credentials if the connection is not encrypted. The misuse case Sniff Plaintext LDAP Bind Credentials threatens Authenticate Federated User. Using LDAPS/StartTLS with certificate validation helps prevent this by encrypting the connection and verifying the AD server.
+
+**Iteration 2 – Bind Credential Theft:** Keycloak requires a bind credential when configured to connect to Active Directory using an authenticated LDAP bind. If the credential is exposed through configuration or insecure secret handling, an attacker could obtain it. The misuse case Steal Stored LDAP Bind Credential threatens Synchronize LDAP Users. Keycloak supports using a vault expression for the LDAP Bind Credential so that the secret can be retrieved from a configured vault rather than entered directly as the credential value.
+
+**Iteration 3 – Look-Alike Group Injection:** An insider with AD group-write access could create a fake group with the same name as a privileged group and try to gain admin access. The misuse case Inject Look-Alike Group to Gain Admin Role threatens Map LDAP Groups to Realm Roles. Restricting group mapping to the configured LDAP Groups DN helps prevent this by only importing groups from that location.
+
+**Iteration 4 – Membership abuse inside the permitted subtree:** Restricting LDAP group mapping to the configured Groups DN does not prevent an insider with sufficient Active Directory permissions from adding themselves to a legitimate privileged group within that permitted subtree. The misuse case Add Self to Legitimate Mapped Group threatens Map LDAP Groups to Realm Roles. This identifies an additional security requirement for auditing role assignments resulting from LDAP group mappings. Our review did not find a Keycloak capability that individually audits these mapper-generated role assignments, so detecting the unauthorized membership change may depend on auditing and security controls in Active Directory.
+
+**Derived security requirements:**
+
+| ID | Requirement | Addresses misuse case | Implemented in Keycloak? (doc/code link) |
+|---|---|---|---|
+| SR-5.1 | Keycloak shall connect to LDAP federation providers over LDAPS or StartTLS and shall reject connections whose server certificate fails validation against the configured truststore. | Sniff Plaintext LDAP Bind Credentials | **Partially.** Keycloak supports LDAPS, StartTLS, and truststore validation, but plaintext ldap:// connections are still permitted if an administrator configures them. [Server Administration Guide](https://www.keycloak.org/docs/latest/server_admin/)  |
+| SR-5.2 | Keycloak shall support retrieving the LDAP bind credential from an external vault so that the secret is not stored in the Keycloak database. | Steal Stored LDAP Bind Credential | **Yes.** when configured. Keycloak supports using a vault expression for the LDAP User Federation Bind Credential, allowing the credential to be retrieved from a configured vault rather than entered directly as the credential value. [Server Administration Guide](https://www.keycloak.org/server/vault) |
+| SR-5.3 | Keycloak shall import and map only LDAP groups whose distinguished name falls under the group mapper's configured LDAP Groups DN. | Inject Look-Alike Group to Gain Admin Role | **Yes.** The group mapper searches only under the configured Groups DN. [Server Administration Guide](https://www.keycloak.org/docs/latest/server_admin/) |
+| SR-5.4 | Keycloak shall record an audit event whenever an LDAP mapper grants or removes a role, including the user, the role, and the group DN that triggered the change. | Add Self to Legitimate Mapped Group | **No.** Our review did not identify a Keycloak capability that records an individual audit event whenever an LDAP mapper causes a role assignment during synchronization. Detecting unauthorized changes to the underlying LDAP/AD group membership therefore depends on auditing or security controls in the directory environment. |
+
+
+**Alignment observations:**
+Keycloak has the main controls needed here, including encrypted LDAP connections, certificate validation, vault support, and Group DN scoping. However, some of these must be configured by the administrator, so plaintext LDAP or database-stored credentials are still possible. Keycloak also trusts Active Directory for group membership, so it may not detect when a legitimate group is abused. Detecting this type of insider activity depends on auditing in Active Directory.
 
 ## Part 1 — Team-level items (shared, assign at meeting)
 
@@ -195,6 +209,14 @@ Status key: *Default* (enforced out of the box). *Opt-in* (implemented but off u
 | Compile individual reflections into one team reflection | | |
 | GitHub Project Board up to date + link in report: `<link here>` | | |
 | Final assembly/formatting of this file + Canvas submission | | |
+
+## AI-Assisted Use/Misuse Case Diagram Review
+
+**Prompt used:**  
+*(Representative prompt from the team issue)*
+
+**Reflection on usefulness:**  
+*(Combined team reflection based on the comments)*
 
 ## Team Reflection (Part 1)
 
