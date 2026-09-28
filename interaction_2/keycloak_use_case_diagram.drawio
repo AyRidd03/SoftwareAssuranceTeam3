@@ -13,9 +13,6 @@
         <mxCell id="actor_admin" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;fontSize=13;" value="Realm admin" vertex="1">
           <mxGeometry height="60" width="30" x="47" y="410" as="geometry" />
         </mxCell>
-        <mxCell id="actor_client" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;fontSize=13;" value="Client app" vertex="1">
-          <mxGeometry height="60" width="30" x="603" y="140" as="geometry" />
-        </mxCell>
         <mxCell id="uc_register" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E1F5EE;strokeColor=#0F6E56;fontColor=#085041;fontStyle=1;fontSize=13;" value="Register account" vertex="1">
           <mxGeometry height="44" width="170" x="145" y="88" as="geometry" />
         </mxCell>
@@ -76,8 +73,10 @@
         <mxCell id="a8" edge="1" parent="1" source="actor_admin" style="endArrow=none;html=1;rounded=0;" target="uc_audit">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="a9" edge="1" parent="1" source="actor_client" style="endArrow=none;html=1;rounded=0;" target="uc_tokens">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="a9" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" target="uc_tokens">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="603" y="170" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="a10" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="uc_broker">
           <mxGeometry relative="1" as="geometry">
@@ -109,6 +108,9 @@
         </mxCell>
         <mxCell id="2nrgisUYVh2v3bguWAAp-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1EFE8;strokeColor=#5F5E5A;fontColor=#444441;fontSize=11;" value="IdP/LDAP&lt;br&gt;(external)" vertex="1">
           <mxGeometry height="60" width="140" x="603" y="252" as="geometry" />
+        </mxCell>
+        <mxCell id="HEEC8NYigxWhw7Vk51HG-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1EFE8;strokeColor=#5F5E5A;fontColor=#444441;fontSize=11;" value="Client App" vertex="1">
+          <mxGeometry height="60" width="140" x="603" y="140" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
