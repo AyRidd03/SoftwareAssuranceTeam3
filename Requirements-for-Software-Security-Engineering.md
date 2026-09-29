@@ -48,7 +48,7 @@ I scoped the earlier four use cases and four misuse cases to this interaction. T
 The Realm admin sets or resets user credentials and configures the realm's password policy (length, composition, hashing, history, blacklist). Every account in the realm depends on this, so a mistake here weakens every login.
 
 ## Use/misuse case diagram
-
+![Interaction 2 Use/Misuse Case Diagram](diagrams/interaction_2_misuse_case_diagram.png)
 `![Diagram](diagrams/interaction_2_use_case_diagram.png)`
 `![Diagram](diagrams/interaction_2_misuse_case_diagram.png)`
 
