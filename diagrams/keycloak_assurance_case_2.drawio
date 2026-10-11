@@ -262,39 +262,6 @@
         <mxCell id="e_R11_C13" edge="1" parent="1" source="R11" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="C13">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="R12" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=17;fillColor=#FFF2CC;fontSize=10;" value="Rebuttal R12: Unless tokens can be forged, replayed or misused" vertex="1">
-          <mxGeometry height="80" width="160" x="1520" y="400" as="geometry" />
-        </mxCell>
-        <mxCell id="e_C13_R12" edge="1" parent="1" source="C13" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="R12">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="C14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" value="&lt;b&gt;Sub-Claim C14:&lt;br&gt;&lt;/b&gt;Tokens are signed, scoped, short-lived and verifiable" vertex="1">
-          <mxGeometry height="80" width="160" x="1520" y="530" as="geometry" />
-        </mxCell>
-        <mxCell id="e_R12_C14" edge="1" parent="1" source="R12" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="C14">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="E10" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;rounded=0;fontSize=9;" value="&lt;b style=&quot;font-size: 8px;&quot;&gt;Evidence E10:&lt;/b&gt;&lt;br style=&quot;font-size: 8px;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Admin Guide: realm keys, rotation, not-before push&lt;/span&gt;" vertex="1">
-          <mxGeometry height="120" width="120" x="1540" y="650" as="geometry" />
-        </mxCell>
-        <mxCell id="e_C14_E10" edge="1" parent="1" source="C14" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="E10">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="UM2" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=17;fillColor=#A9C4EB;fontSize=10;" value="Undermine UM2: Unless the test setup differs from production" vertex="1">
-          <mxGeometry height="80" width="160" x="1520" y="840" as="geometry" />
-        </mxCell>
-        <mxCell id="e_E10_UM2" edge="1" parent="1" source="E10" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="UM2">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="NEa3nKhdWmUcdE9ewPFY-5" edge="1" parent="1" source="C15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="NEa3nKhdWmUcdE9ewPFY-2">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="C15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" value="&lt;b&gt;Sub-Claim C15:&lt;br&gt;&lt;/b&gt;Test configuration matches production" vertex="1">
-          <mxGeometry height="80" width="160" x="1520" y="960" as="geometry" />
-        </mxCell>
-        <mxCell id="e_UM2_C15" edge="1" parent="1" source="UM2" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="C15">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="R13" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=17;fillColor=#FFF2CC;fontSize=10;" value="Rebuttal R13: Unless step-up MFA can be skipped" vertex="1">
           <mxGeometry height="80" width="160" x="1700" y="400" as="geometry" />
         </mxCell>
@@ -427,20 +394,17 @@
         <mxCell id="lgdt" parent="1" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;fontSize=10;" value="Undeveloped (evidence still needed)" vertex="1">
           <mxGeometry height="40" width="110" x="1095" y="1355" as="geometry" />
         </mxCell>
-        <mxCell id="NEa3nKhdWmUcdE9ewPFY-2" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#000000;" value="" vertex="1">
-          <mxGeometry height="30" width="30" x="1585" y="1030" as="geometry" />
-        </mxCell>
         <mxCell id="NEa3nKhdWmUcdE9ewPFY-3" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#000000;" value="" vertex="1">
           <mxGeometry height="30" width="30" x="1185" y="1100" as="geometry" />
         </mxCell>
-        <mxCell id="NEa3nKhdWmUcdE9ewPFY-10" edge="1" parent="1" source="NEa3nKhdWmUcdE9ewPFY-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="NEa3nKhdWmUcdE9ewPFY-12">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="2381.0000000000005" y="650" as="sourcePoint" />
-            <mxPoint x="2379.9999999999995" y="710" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="NEa3nKhdWmUcdE9ewPFY-11" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;rounded=0;fontSize=9;" value="&lt;b style=&quot;font-size: 8px;&quot;&gt;Evidence E15:&lt;/b&gt;&lt;br style=&quot;font-size: 8px;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Admin Guide: realm isolation; per-realm keystores; vault refs&lt;/span&gt;" vertex="1">
           <mxGeometry height="120" width="120" x="2320" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="NEa3nKhdWmUcdE9ewPFY-13" edge="1" parent="1" source="NEa3nKhdWmUcdE9ewPFY-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="NEa3nKhdWmUcdE9ewPFY-12" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2380" y="640" as="sourcePoint" />
+            <mxPoint x="2379.9999999999995" y="710" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="NEa3nKhdWmUcdE9ewPFY-12" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#CCCCCC;" value="" vertex="1">
           <mxGeometry height="30" width="30" x="2365" y="620" as="geometry" />
