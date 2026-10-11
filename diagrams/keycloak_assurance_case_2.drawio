@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram id="ac" name="Keycloak assurance case">
-    <mxGraphModel dx="1318" dy="783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3400" pageHeight="1500" math="0" shadow="0">
+    <mxGraphModel dx="1588" dy="943" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3400" pageHeight="1500" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -238,7 +238,7 @@
         <mxCell id="e_R10_C12" edge="1" parent="1" source="R10" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="C12">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="E9" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;rounded=0;fontSize=9;" value="&lt;b style=&quot;font-size: 8px;&quot;&gt;Evidence E9:&lt;/b&gt;&lt;br style=&quot;font-size: 8px;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Admin Guide: Configuring auditing (user and admin events)&lt;/span&gt;" vertex="1">
+        <mxCell id="E9" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;rounded=0;fontSize=9;" value="&lt;b style=&quot;font-size: 8px;&quot;&gt;Evidence E8:&lt;/b&gt;&lt;br style=&quot;font-size: 8px;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Admin Guide: Configuring auditing (user and admin events)&lt;/span&gt;" vertex="1">
           <mxGeometry height="120" width="120" x="1320" y="725" as="geometry" />
         </mxCell>
         <mxCell id="e_C12_E9" edge="1" parent="1" source="C12" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="E9">
@@ -262,19 +262,19 @@
         <mxCell id="e_R11_C13" edge="1" parent="1" source="R11" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="C13">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="R13" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=17;fillColor=#FFF2CC;fontSize=10;" value="Rebuttal R13: Unless step-up MFA can be skipped" vertex="1">
+        <mxCell id="R13" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=17;fillColor=#FFF2CC;fontSize=10;" value="Rebuttal R12: Unless step-up MFA can be skipped" vertex="1">
           <mxGeometry height="80" width="160" x="1700" y="400" as="geometry" />
         </mxCell>
         <mxCell id="e_C13_R13" edge="1" parent="1" source="C13" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="R13">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="C16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" value="&lt;b&gt;Sub-Claim C16:&lt;br&gt;&lt;/b&gt;Step-up MFA is enforced when higher assurance is requested" vertex="1">
+        <mxCell id="C16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" value="&lt;b&gt;Sub-Claim C14:&lt;br&gt;&lt;/b&gt;Step-up MFA is enforced when higher assurance is requested" vertex="1">
           <mxGeometry height="80" width="160" x="1700" y="530" as="geometry" />
         </mxCell>
         <mxCell id="e_R13_C16" edge="1" parent="1" source="R13" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="C16">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="E12" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;rounded=0;fontSize=9;" value="&lt;b style=&quot;font-size: 8px;&quot;&gt;Evidence E12:&lt;/b&gt;&lt;br style=&quot;font-size: 8px;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Admin Guide: ACR to LoA mapping; step-up flow&lt;/span&gt;" vertex="1">
+        <mxCell id="E12" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;rounded=0;fontSize=9;" value="&lt;b style=&quot;font-size: 8px;&quot;&gt;Evidence E9:&lt;/b&gt;&lt;br style=&quot;font-size: 8px;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Admin Guide: ACR to LoA mapping; step-up flow&lt;/span&gt;" vertex="1">
           <mxGeometry height="120" width="120" x="1720" y="650" as="geometry" />
         </mxCell>
         <mxCell id="e_C16_E12" edge="1" parent="1" source="C16" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="E12">
@@ -286,19 +286,19 @@
         <mxCell id="e_E12_OK10" edge="1" parent="1" source="E12" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="OK10">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="R14" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=17;fillColor=#FFF2CC;fontSize=10;" value="Rebuttal R14: Unless a forged IdP assertion is accepted" vertex="1">
+        <mxCell id="R14" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=17;fillColor=#FFF2CC;fontSize=10;" value="Rebuttal R13: Unless a forged IdP assertion is accepted" vertex="1">
           <mxGeometry height="80" width="160" x="1880" y="400" as="geometry" />
         </mxCell>
         <mxCell id="e_C13_R14" edge="1" parent="1" source="C13" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="R14">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="C17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" value="&lt;b&gt;Sub-Claim C17:&lt;br&gt;&lt;/b&gt;Brokered assertions are validated and mapped to the right account" vertex="1">
+        <mxCell id="C17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" value="&lt;b&gt;Sub-Claim C15:&lt;br&gt;&lt;/b&gt;Brokered assertions are validated and mapped to the right account" vertex="1">
           <mxGeometry height="80" width="160" x="1880" y="530" as="geometry" />
         </mxCell>
         <mxCell id="e_R14_C17" edge="1" parent="1" source="R14" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="C17">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="E13" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;rounded=0;fontSize=9;" value="&lt;b style=&quot;font-size: 8px;&quot;&gt;Evidence E13:&lt;/b&gt;&lt;br style=&quot;font-size: 8px;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Admin Guide: Integrating identity providers&lt;/span&gt;" vertex="1">
+        <mxCell id="E13" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;rounded=0;fontSize=9;" value="&lt;b style=&quot;font-size: 8px;&quot;&gt;Evidence E10:&lt;/b&gt;&lt;br style=&quot;font-size: 8px;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Admin Guide: Integrating identity providers&lt;/span&gt;" vertex="1">
           <mxGeometry height="120" width="120" x="1900" y="650" as="geometry" />
         </mxCell>
         <mxCell id="e_C17_E13" edge="1" parent="1" source="C17" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="E13">
@@ -310,19 +310,19 @@
         <mxCell id="e_E13_OK11" edge="1" parent="1" source="E13" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="OK11">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="R15" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=17;fillColor=#FFF2CC;fontSize=10;" value="Rebuttal R15: Unless LDAP/AD credentials can be exposed" vertex="1">
+        <mxCell id="R15" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=17;fillColor=#FFF2CC;fontSize=10;" value="Rebuttal R14: Unless LDAP/AD credentials can be exposed" vertex="1">
           <mxGeometry height="80" width="160" x="2060" y="400" as="geometry" />
         </mxCell>
         <mxCell id="e_C13_R15" edge="1" parent="1" source="C13" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="R15">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="C18" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" value="&lt;b&gt;Sub-Claim C18:&lt;br&gt;&lt;/b&gt;LDAP/AD links are encrypted and credentials are not exposed" vertex="1">
+        <mxCell id="C18" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" value="&lt;b&gt;Sub-Claim C16:&lt;br&gt;&lt;/b&gt;LDAP/AD links are encrypted and credentials are not exposed" vertex="1">
           <mxGeometry height="80" width="160" x="2060" y="530" as="geometry" />
         </mxCell>
         <mxCell id="e_R15_C18" edge="1" parent="1" source="R15" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="C18">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="E14" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;rounded=0;fontSize=9;" value="&lt;b style=&quot;font-size: 8px;&quot;&gt;Evidence E14:&lt;/b&gt;&lt;br style=&quot;font-size: 8px;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Admin Guide: LDAP over SSL; password hashing&lt;/span&gt;" vertex="1">
+        <mxCell id="E14" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;rounded=0;fontSize=9;" value="&lt;b style=&quot;font-size: 8px;&quot;&gt;Evidence E11:&lt;/b&gt;&lt;br style=&quot;font-size: 8px;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Admin Guide: LDAP over SSL; password hashing&lt;/span&gt;" vertex="1">
           <mxGeometry height="120" width="120" x="2080" y="650" as="geometry" />
         </mxCell>
         <mxCell id="e_C18_E14" edge="1" parent="1" source="C18" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="E14">
@@ -346,7 +346,7 @@
         <mxCell id="e_IR1_UC1" edge="1" parent="1" source="IR1" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="UC1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="C19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" value="&lt;b&gt;Sub-Claim C19:&lt;br&gt;&lt;/b&gt;Realms are isolated and secrets are protected in transit, at rest and in logs" vertex="1">
+        <mxCell id="C19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" value="&lt;b&gt;Sub-Claim C17:&lt;br&gt;&lt;/b&gt;Realms are isolated and secrets are protected in transit, at rest and in logs" vertex="1">
           <mxGeometry height="80" width="160" x="2300" y="290" as="geometry" />
         </mxCell>
         <mxCell id="e_UC1_C19" edge="1" parent="1" source="UC1" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="C19">
@@ -397,7 +397,7 @@
         <mxCell id="NEa3nKhdWmUcdE9ewPFY-3" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#000000;" value="" vertex="1">
           <mxGeometry height="30" width="30" x="1185" y="1100" as="geometry" />
         </mxCell>
-        <mxCell id="NEa3nKhdWmUcdE9ewPFY-11" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;rounded=0;fontSize=9;" value="&lt;b style=&quot;font-size: 8px;&quot;&gt;Evidence E15:&lt;/b&gt;&lt;br style=&quot;font-size: 8px;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Admin Guide: realm isolation; per-realm keystores; vault refs&lt;/span&gt;" vertex="1">
+        <mxCell id="NEa3nKhdWmUcdE9ewPFY-11" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;rounded=0;fontSize=9;" value="&lt;b style=&quot;font-size: 8px;&quot;&gt;Evidence E12:&lt;/b&gt;&lt;br style=&quot;font-size: 8px;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Admin Guide: realm isolation; per-realm keystores; vault refs&lt;/span&gt;" vertex="1">
           <mxGeometry height="120" width="120" x="2320" y="520" as="geometry" />
         </mxCell>
         <mxCell id="NEa3nKhdWmUcdE9ewPFY-13" edge="1" parent="1" source="NEa3nKhdWmUcdE9ewPFY-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="NEa3nKhdWmUcdE9ewPFY-12" value="">
