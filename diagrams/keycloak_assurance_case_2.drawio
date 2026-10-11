@@ -1,13 +1,13 @@
 <mxfile host="app.diagrams.net">
   <diagram id="ac" name="Keycloak assurance case">
-    <mxGraphModel dx="2272" dy="1350" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3400" pageHeight="1500" math="0" shadow="0">
+    <mxGraphModel dx="1318" dy="783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3400" pageHeight="1500" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="NEa3nKhdWmUcdE9ewPFY-15" edge="1" parent="1" source="C1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="IR1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="C1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" value="&lt;b&gt;Top-Claim C2:&lt;br&gt;&lt;/b&gt;Keycloak securely authenticates and authorises End users, Realm admins, Client apps and external IdP/LDAP interactions" vertex="1">
+        <mxCell id="C1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" value="&lt;b&gt;Top-Claim C1:&lt;br&gt;&lt;/b&gt;Keycloak securely authenticates and authorises End users, Realm admins, Client apps and external IdP/LDAP interactions" vertex="1">
           <mxGeometry height="100" width="200" x="1010" as="geometry" />
         </mxCell>
         <mxCell id="CT1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=30;fontSize=10;" value="Context: CT1&lt;br&gt;Scope is the Keycloak server boundary and actors in the use-case diagram" vertex="1">
