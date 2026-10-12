@@ -61,20 +61,22 @@ The argument follows the trust boundary from the Part 1 interaction: the federat
 **Prompt used:**
 
 ```
-I am developing Claim 1 for our Software Assurance assignment, focusing on employee authentication and credential security in Keycloak. Our top-level claim is: "Keycloak minimizes unauthorized access to enterprise applications through employee password and OTP authentication."
 
-Using the eliminative argumentation approach discussed in class, the faculty's assurance-case example, and our previous requirements and misuse-case analysis, review my assurance argument and help me strengthen its structure.
-
-Specifically:
-
-Evaluate whether my top-level claim describes a meaningful security property rather than simply stating that Keycloak provides certain features.
-Examine the four threats identified in our misuse-case analysis: credential stuffing, stolen passwords, repeated OTP guessing, and account-lockout denial of service.
-Identify appropriate rebuttals using "Unless..." statements and determine whether the supporting subclaims adequately address each rebuttal.
-Identify undercuts or undermines that could challenge the reasoning or reliability of the supporting evidence, particularly where Keycloak security controls depend on configuration.
-Ensure that every argument branch terminates in tangible, measurable evidence expressed as a noun phrase, consistent with the faculty's assurance-case example.
-Recommend improvements to the diagram's structure and notation so I can recreate it accurately in draw.io.
-Distinguish between security capabilities documented by Keycloak and protections that require deployment-specific configuration or testing. Do not assume that controls are enabled or that evidence has been collected.
-Explain any weaknesses or unresolved rebuttals rather than treating the assurance argument as fully supported.
+> I am developing Claim 1 for our Software Assurance assignment, focusing on employee authentication and credential security in Keycloak. Our top-level claim is: "Keycloak minimizes unauthorized access to enterprise applications through employee password and OTP authentication."
+>
+> Using the eliminative argumentation approach discussed in class, the faculty's assurance-case example, and our previous requirements and misuse-case analysis, review my assurance argument and help me strengthen its structure.
+>
+> Specifically:
+>
+> 1. Evaluate whether my top-level claim describes a meaningful security property rather than simply stating that Keycloak provides certain features.
+> 2. Examine the four threats identified in our misuse-case analysis: credential stuffing, stolen passwords, repeated OTP guessing, and account-lockout denial of service.
+> 3. Identify appropriate rebuttals using "Unless..." statements and determine whether the supporting subclaims adequately address each rebuttal.
+> 4. Identify undercuts or undermines that could challenge the reasoning or reliability of the supporting evidence, particularly where Keycloak security controls depend on configuration.
+> 5. Ensure that every argument branch terminates in tangible, measurable evidence expressed as a noun phrase, consistent with the faculty's assurance-case example.
+> 6. Recommend improvements to the diagram's structure and notation so I can recreate it accurately in draw.io.
+> 7. Distinguish between security capabilities documented by Keycloak and protections that require deployment-specific configuration or testing. Do not assume that controls are enabled or that evidence has been collected.
+>
+> Explain any weaknesses or unresolved rebuttals rather than treating the assurance argument as fully supported.
 
 ```
 
