@@ -2,14 +2,14 @@
 
 | Issue | PR | Weakness | Status |
 |---|---|---|---|
-| [#20008](https://github.com/keycloak/keycloak/issues/20008) UMA policy creation missing from the admin audit log | [#53316](https://github.com/keycloak/keycloak/pull/53316) | [CWE-778](https://cwe.mitre.org/data/definitions/778.html) Insufficient Logging | Approved, all CI checks passing, waiting on code-owner review |
+| [#20008](https://github.com/keycloak/keycloak/issues/20008) UMA policy creation missing from the admin audit log | [#53316](https://github.com/keycloak/keycloak/pull/53316) | [CWE-778](https://cwe.mitre.org/data/definitions/778.html) Insufficient Logging | Merged |
 | [#53249](https://github.com/keycloak/keycloak/issues/53249) Brute force failure count never reset by identity provider logins | [#53724](https://github.com/keycloak/keycloak/pull/53724) | [CWE-645](https://cwe.mitre.org/data/definitions/645.html) Overly Restrictive Account Lockout Mechanism | PR open, waiting on maintainer review |
 
 ---
 
 ## #20008: UMA policy creation missing from the admin audit log
 
-**Status:** [PR #53316](https://github.com/keycloak/keycloak/pull/53316) is approved and all CI checks pass. It's waiting on code-owner review before it can merge.
+**Status:** [PR #53316](https://github.com/keycloak/keycloak/pull/53316) was merged into Keycloak `main` on October 12, 2026.
 
 ### The issue
 

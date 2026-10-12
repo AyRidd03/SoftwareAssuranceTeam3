@@ -11,17 +11,21 @@ TEAM NOTE (doesn't render on GitHub, only visible while editing):
 
 ### Top-level claims
 
-1. 
+1. Keycloak minimizes unauthorized access to enterprise applications through employee password and OTP authentication.
 2. 
 3. Keycloak minimizes unauthorized use of the tokens it issues to client applications.
 4. Keycloak minimizes unauthorized access through logins brokered from the partner identity provider.
-5. 
+5. Keycloak grants federated Active Directory users only the realm roles their legitimate directory group memberships authorize. 
 
 ---
 
-### Claim 1: `<top-level claim>` — [@Sewhenu-Ayeni](https://github.com/Sewhenu-Ayeni)
+### Claim 1: Keycloak minimizes unauthorized access to enterprise applications through employee password and OTP authentication
+
+The argument follows the misuse chain from [Interaction 1](Requirements-for-Software-Security-Engineering.md#interaction-1-employee-login). Each rebuttal identifies a way employee authentication could be compromised or disrupted, and each sub-claim addresses that doubt. The four branches cover repeated password guessing (R1), stolen passwords (R2), repeated OTP guessing (R3), and account-lockout denial of service (R4). Configured brute-force protection (C1.1), required OTP (C1.2), secondary authentication failure controls (C1.3), and authentication-failure monitoring (C1.4) provide the corresponding protections. UC1 and UC2 challenge whether the lockout controls are configured correctly, while UM1 and UM2 challenge the reliability of authentication-flow and monitoring evidence. The account-lockout denial-of-service risk remains partially unresolved because monitoring alone does not prevent disruption.
 
 ![Claim 1 Assurance Case](diagrams/assurance-case-claim-1.png)
+
+*Source: [`diagrams/assurance-case-claim-1.drawio`](diagrams/assurance-case-claim-1.drawio). Grey circles mark where a branch ends in evidence.*
 
 ### Claim 2: `<top-level claim>` — [@AyRidd03](https://github.com/AyRidd03)
 
@@ -43,10 +47,13 @@ The argument follows the misuse chain from [Interaction 4](Requirements-for-Soft
 
 *Source: [`diagrams/assurance-case-claim-4.drawio`](diagrams/assurance-case-claim-4.drawio). Grey circles mark where a branch ends in evidence.*
 
-### Claim 5: `<top-level claim>` — [@isaiahjames11](https://github.com/isaiahjames11)
+### Claim 5: Keycloak grants federated Active Directory users only the realm roles their legitimate directory group memberships authorize — [@isaiahjames11](https://github.com/isaiahjames11)
 
-![Claim 5 Assurance Case](diagrams/assurance-case-claim-5.png)
+The argument follows the trust boundary from the Part 1 interaction: the federation link through which every employee identity and group membership enters Keycloak from Active Directory. Each rebuttal is a way a federated user could end up holding a realm role that no permitted AD group grants, and each sub-claim removes that doubt. The five branches cover the federation channel (R5.1), the group-to-role mapping (R5.3), the account-linking flow (R5.5), malformed directory data (R5.7), and detection of an unauthorized assignment (R5.8). Context CT5.1 sets the boundary of the claim: a change made by a legitimate AD administrator is authorized from Keycloak's point of view, so insider misuse of AD itself is out of scope. Two branches have no supporting feature in Keycloak today and are shown as gaps: attribute value limits (E5.12) and per-mapping audit events (E5.13).
 
+![Claim 5 Assurance Case](diagrams/AssuranceClaim5.drawio.png)
+
+*Source: [`diagrams/AssuranceClaim5.drawio`](diagrams/AssuranceClaim5.drawio). Grey circles mark where a branch ends in evidence.*
 ---
 
 ### AI-assisted improvement
@@ -84,7 +91,20 @@ AI's ability to structure information grants us the capability of generating the
 
 | ID | Evidence | Alignment | Source / where it would come from | Gap |
 |---|---|---|---|---|
-| E1.1 | | | | |
+| E1.1 | Brute-force protection configuration export | Can be made available | Realm brute-force detection settings in the [Keycloak Server Administration Guide][c1-admin-docs], verified through a realm export. | Brute-force detection is disabled by default. Our deployed settings have not been collected. |
+| E1.2 | Password account-lockout test results | Requires additional effort | Controlled repeated failed-password attempts against a configured Keycloak test realm. | No deployment-specific lockout test results have been collected. |
+| E2.1 | Employee authentication-flow configuration export | Can be made available | Authentication flow settings and required OTP execution in the [Keycloak administration documentation][c1-admin-docs]. | The employee flow must explicitly enforce OTP; no current configuration export has been collected. |
+| E2.2 | Password-only authentication rejection test results | Requires additional effort | Login tests using a valid password without completing the required OTP challenge. | No password-only rejection test results have been collected. |
+| E3.1 | Secondary authentication failure protection configuration | Can be made available | Secondary authentication failure threshold and lockout settings in the [Keycloak administration documentation][c1-admin-docs]. | The configured threshold has not been verified in a deployed realm. |
+| E3.2 | Invalid-OTP lockout test results | Requires additional effort | Controlled repeated invalid-OTP attempts against a configured test realm. | No OTP failure lockout test results have been collected. |
+| E4.1 | Authentication-failure event logs with client IP addresses | Can be made available | Keycloak login-error events and [event logging configuration][c1-admin-docs]. | Event logging must be enabled and retained; actual records have not been collected. |
+| E4.2 | Authentication-failure monitoring test report | Requires additional effort | Keycloak authentication events and an integrated monitoring or SIEM system. | No alert-validation test exists for our proposed deployment. Monitoring alone cannot prevent account-lockout denial of service. |
+| E5.1 | Deployed realm brute-force configuration export | Can be made available | Current realm settings showing brute-force detection enabled and configured thresholds. | Required to address UC1; no deployment-specific export has been collected. |
+| E6.1 | Timestamped authentication-flow configuration export | Can be made available | Current employee realm authentication-flow configuration obtained through the Admin Console or Admin REST API. | Required to address UM1; the configuration must match the deployed environment. |
+
+**Claim 1 gaps.** Keycloak documents the authentication protections needed for password and OTP security, but their effectiveness depends on deployment configuration. The largest evidence gaps are the absence of current realm exports, password and OTP lockout tests, and authentication-monitoring validation. UC1 and UC2 identify configuration-dependent protections, while UM1 and UM2 challenge whether the available evidence accurately represents the deployed environment. Account-lockout denial of service remains a residual availability risk because monitoring suspicious authentication failures does not itself stop an attacker from triggering lockouts.
+
+[c1-admin-docs]: https://www.keycloak.org/docs/latest/server_admin/
 
 ### Claim 2
 
@@ -217,7 +237,23 @@ Two other nodes carry gaps the docs themselves flag:
 
 | ID | Evidence | Alignment | Source / where it would come from | Gap |
 |---|---|---|---|---|
-| E5.1 | | | | |
+| E5.1 | Federation provider TLS configuration scan results | Can be made available | Each provider's Connection URL (ldap:// vs ldaps://) and startTls setting, readable from the Admin REST API or a realm export | Keycloak accepts plaintext ldap:// with StartTLS off; nothing in the realm prevents it. The scan has to be written and run by us. |
+| E5.2 | 	Untrusted-certificate interception test results | Requires additional effort | UserFederationLdapConnectionTest.testLdapConnectionsSsl checks that ldaps:// connections succeed and fail as expected, but no upstream test presents a forged certificate. | A lab MITM test against our own AD connection would have to be built. |
+| E5.3 | 	LDAP truststore configuration record | Can be made available | Server truststore options (Configuring a truststore); the LDAP doc says Use Truststore SPI should stay at Always. | Trust depends entirely on what the operator puts in the truststore; no warning when a provider connects to an untrusted server. |
+| E5.4 | 	Federation provider inventory with scan dates | Requires additional effort | Nothing in Keycloak produces one. It would be generated from the Admin REST API on a schedule, alongside E5.1. | Needs an owner. Without it, UM5.1 (a provider added after the scan) stays open. |
+| E5.5 | 	Duplicate-CN group mapping test results | Available | LDAPGroupMapperTest.test05_DoNotResolveGroupsIfMemberOfNotChildOfGroupBaseDN puts a user in cn=mygroup under a different base DN and asserts no group is imported; test10_multipleGroupMappersInDifferentPaths covers two mappers in separate paths. | The DN-scope test only exercises the memberOf retrieval strategy, not the default member attribute strategy. |
+| E5.6 | 	Group policy and token mapper full-path configuration export | Can be made available | Realm export showing every Group Membership mapper has Full group path on and how each group policy identifies groups.| CVE-2026-19608 (group policy matching name-only claims) has no published fix (Red Hat). Our configuration is the only control. |
+| E5.7 | 	Directory group name collision report | Requires additional effort | An LDAP query against AD listing group CNs that appear under more than one OU. | Nothing in Keycloak or AD produces this by default. |
+| E5.8 | 	Group-mapping test coverage report | Requires additional effort | Generated by running the federation/ldap module and testsuite/.../federation/ldap tests with a coverage tool such as JaCoCo. | The project doesn't publish per-module coverage. |
+| E5.9 | 	Nonce generation code review findings | Requires additional effort | IdentityBrokerService.clientInitiatedAccountLinking checks a client-supplied SHA-256 hash of nonce + session ID + client ID + provider alias. | 256 hash of nonce + session ID + client ID + provider alias.	The review has to be done by us. The legacy endpoint is now off by default (KcOidcBrokerIdpLinkActionTest.testLegacyClientInitiatedAccountLinking_disabledByDefault); the replacement is the idp_link application-initiated action. |
+| E5.10 | Nonce replay and expiry test results | Requires additional effort | KcOidcBrokerIdpLinkActionTest covers successful, cancelled, rejected and wrong-user linking. | No upstream test replays a used linking URL or checks expiry. |
+| E5.11 | CVE-2026-15571 security advisory | Available | NVD and Red Hat: predictable hash in the legacy account-linking endpoint; fixed in 26.7.2 | None for Keycloak itself. |
+| E5.12 | Deployed Keycloak version record | Can be made available | Server info in the Admin Console or /admin/serverinfo. | Has to be recorded for our deployment and compared against 26.7.2. |
+| E5.13 | LDAP attribute mapper fuzz test results | Requires additional effort | LDAPSpecialCharsTest and LDAPDnTest cover special characters in names and DNs, but no fuzzing exists. | UserAttributeLDAPStorageMapper has no limit on the number of values imported (SR-5). The User Profile multivalued validator caps values for edits, but it is untested whether it applies on LDAP import. Likely a real gap. |
+| E5.14 | Mapper role-assignment audit log sample | Requires additional effort | Admin events record actions taken through the Admin REST API (Auditing admin events). | Role and group changes made by an LDAP mapper during sync or login are not admin REST calls, so nothing records which group DN produced which role (SR-6). This is the largest gap. |
+| E5.15 | SIEM log forwarding configuration | Can be made available | The jboss-logging event listener writes events to the server log, which can be shipped to a SIEM (Configuring auditing). | Only covers events Keycloak emits, so it does not close E5.14. |
+
+*Claim 5 gaps.* Keycloak's own tests cover the core mapping behavior this argument relies on (E5.5), and CVE-2026-15571 shows the account-linking hash behind C5.7 was predictable before 26.7.2, which is why R5.6 asks for a version record (E5.12). As in Claims 3 and 4, most gaps are in evidence about *our configuration*: every federation provider has to use `ldaps://` or StartTLS and stay that way (E5.1 to E5.4), and every group mapper and group policy has to use full group paths, because CVE-2026-19608 has no published fix and name-only matching is the only thing standing between a same-name group and a protected resource (E5.6, E5.7). Two gaps Keycloak cannot close today. It places no limit on the attribute values it imports during sync, so malformed directory data is untested (E5.13). And it never records which AD group produced a mapper-driven role assignment, so an unauthorized role granted through sync leaves no trace that ties it back to its source; forwarding events to a SIEM (E5.15) does not help, because the event is never emitted (E5.14).
 
 ### Summary of gaps
 
